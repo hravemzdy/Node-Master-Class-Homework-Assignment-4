@@ -1,0 +1,27 @@
+<h1>Checkout and Payment</h1>
+
+<hr />
+
+<h2>Review your order</h2>
+
+<table id="checkoutTable">
+  <tr>
+    <th>Art.</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+
+</table>
+
+<div class="formWrapper">
+
+  <form id="cartCheckout" action="/api/orders" method="POST">
+    <div class="formError"></div>
+    <div class="formDelayedSuccess">Your order has been placed. You'll be redirected to your Shopping Cart page till 5 second.</div>
+    <input class="hiddenEmailAddressInput" type="hidden" name="email" />
+
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Checkout</button>
+    </div>
+  </form>
+</div>

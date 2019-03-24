@@ -1,0 +1,38 @@
+<h1>Shopping Cart Article</h1>
+
+<hr />
+
+<h2>Refine the article details</h2>
+
+<div class="formWrapper">
+  <form id="cartEdit1" action="/api/shopping" method="PUT">
+    <input type="hidden" name="_method" value="PUT"/>
+    <div class="formError"></div>
+    <div class="formSuccess">Your Changes Have Been Saved</div>
+    <input class="hiddenEmailAddressInput" type="hidden" name="email" />
+    <input class="hiddenCartLineIndexInput" type="hidden" name="index" />
+    <div class="inputWrapper">
+      <div class="inputLabel">Article</div>
+      <select id="articleSelect" name="articleId">
+      </select>
+    </div>
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Save Changes</button>
+    </div>
+  </form>
+</div>
+
+<hr />
+<h2>Delete this article from Shopping Cart</h2>
+<div class="formWrapper">
+  <form id="cartEdit2" action="/api/shopping" method="DELETE">
+    <input type="hidden" name="_method" value="DELETE"/>
+    <div class="formError"></div>
+    <div class="warning">Warning: This action cannot be undone. Dont click this button on accident!</div>
+    <input class="hiddenEmailAddressInput" type="hidden" name="email" />
+    <input class="hiddenCartLineIndexInput" type="hidden" name="index" />
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta red">Delete this article</button>
+    </div>
+  </form>
+</div>

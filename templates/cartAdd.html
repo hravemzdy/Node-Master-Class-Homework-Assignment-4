@@ -1,0 +1,22 @@
+<h1>Add delicatezza</h1>
+<h2>Select something delicious to assaporare</h2>
+<a class="backButton" href="/cart/all">Back</a>
+<hr />
+
+
+<div class="formWrapper">
+  <form id="cartAdd" action="/api/shopping" method="POST">
+    <input class="hiddenEmailAddressInput"  type="hidden" name="email" />
+    <div class="formError"></div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Article</div>
+      <select id="articleSelect" name="articleId">
+        <option value="0" selected>Select article...</option>
+      </select>
+    </div>
+
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Add to Cart</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,52 @@
+<h1>Payment Gateway</h1>
+<h2>Review your payment and credit card's detail</h2>
+<hr />
+
+<table id="paymentTable">
+  <tr>
+    <th>Order number</th>
+    <th id="cellOrderNumber"></th>
+  </tr>
+  <tr>
+    <th>Order date</th>
+    <th id="cellOrderDate"></th>
+  </tr>
+  <tr>
+    <th>Customer's name</th>
+    <th id="cellFullName"></th>
+  </tr>
+  <tr>
+    <th>Address for delivery</th>
+    <th id="cellToAddress"></th>
+  </tr>
+  <tr>
+    <th>Credit card number</th>
+    <th id="cellCardNumb"></th>
+  </tr>
+  <tr>
+    <th>Total payment</th>
+    <th id="cellPayment"></th>
+  </tr>
+  <tr>
+    <th>Customer's email</th>
+    <th id="cellEmailAdd"></th>
+  </tr>
+  <tr id="noOrderMessage">
+    <td colspan="5">There is no pending order!</td>
+  </tr>
+
+</table>
+
+<div class="formWrapper">
+  <form id="cartPayment" action="/api/payment" method="POST">
+    <div class="formError"></div>
+    <div class="formDelayedSuccess">Your payment has been sent. You'll be redirected to your Order's page till 5 second.</div>
+    <input class="hiddenEmailAddressInput" type="hidden" name="email" />
+    <input class="hiddenOrderNumberInput" type="hidden" name="orderId" />
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta blue">Pay by creadit card</button>
+    </div>
+  </form>
+</div>
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
